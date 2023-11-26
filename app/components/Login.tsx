@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { Dispatch, SetStateAction, useState } from 'react';
 import logo from '@/public/logo-nubia.png';
 
-export default function Login({
+export const Login = ({
   setAccess,
 }: {
   setAccess: Dispatch<SetStateAction<boolean>>;
-}) {
+}) => {
   const [code, setCode] = useState('');
   const handleClick = () => {
     const hash = SHA256(code).toString();

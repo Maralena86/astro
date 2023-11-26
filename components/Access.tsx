@@ -10,10 +10,9 @@ export const Access = ({
 }) => {
   // const [code, setCode] = useState('');
   const handleClick = () => {
-  // const hash = SHA256(code).toString()
+  const hash = SHA256('Gradiva2024').toString()
     if (
-      // hash ===
-      'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02' ===
+      hash ===
       'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
     ) {
       setAccess(true);

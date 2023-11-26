@@ -20,7 +20,7 @@ export default function Login({
     } else {
       alert('Código incorrecto');
     }
-  };
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center">

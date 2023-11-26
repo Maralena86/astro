@@ -9,7 +9,7 @@ export default function Page() {
   const [access, setAccess] = useState(false);
 
   return (
-    <main className="flex min-h-screen flex-col p-6">
+    <main className="flex min-h-screen flex-col p-4">
       {access ? (
         <div>
           <h1 className="p-4 text-center uppercase text-white">Videos</h1>

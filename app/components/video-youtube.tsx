@@ -1,5 +1,3 @@
-// components/VideoComponent.tsx
-
 interface VideoYoutubeProps {
   name: string;
   linky: string;

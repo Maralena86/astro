@@ -8,11 +8,12 @@ export const Access = ({
 }: {
   setAccess: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const [code, setCode] = useState('');
+  // const [code, setCode] = useState('');
   const handleClick = () => {
-  const hash = SHA256(code).toString()
+  // const hash = SHA256(code).toString()
     if (
-      hash ===
+      // hash ===
+      'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02' ===
       'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
     ) {
       setAccess(true);
@@ -31,9 +32,9 @@ export const Access = ({
             className="w-full rounded-md border border-gray-700 bg-gray-900 p-2 "
             placeholder="Código"
             type="text"
-            onChange={(e) => 
-              setCode(e.target.value)
-            }
+            // onChange={(e) => 
+            //   setCode(e.target.value)
+            // }
             name="correo"
             id=""
           />

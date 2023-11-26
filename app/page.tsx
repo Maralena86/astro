@@ -23,8 +23,7 @@ export default function Home() {
           </div>
         </div>
       ) : (
-        <div>coucou</div>
-        // <Login setAccess={setAccess} />
+        <Login setAccess={setAccess} />
       )}
     </main>
   );

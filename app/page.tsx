@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { VideoYoutube } from '@/components/video-youtube';
+import { VideoYoutube } from '@/components/VideoYoutube';
 import videos from './lib/videos.json';
-import { Login } from '@/components/login';
+import { Login } from '@/components/Login';
 export default function Home() {
   const [access, setAccess] = useState(false);
 

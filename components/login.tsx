@@ -8,7 +8,7 @@ export const Login = ({
 }: {
   setAccess: Dispatch<SetStateAction<boolean>>;
 }) => {
-  // const [code, setCode] = useState('');
+  const [code, setCode] = useState('');
   // const handleClick = () => {
     
   //   const hash = SHA256(code).toString();
@@ -33,9 +33,9 @@ export const Login = ({
             className="w-full rounded-md border border-gray-700 bg-gray-900 p-2 "
             placeholder="Código"
             type="text"
-            // onChange={(e) => {
-            //   setCode(e.target.value);
-            // }}
+            onChange={(e) => 
+              setCode(e.target.value)
+            }
             name="correo"
             id=""
           />

@@ -9,10 +9,10 @@ export const Access = ({
   setAccess: Dispatch<SetStateAction<boolean>>;
 }) => {
   const [code, setCode] = useState('');
-  // const handleClick = () => {
+  const handleClick = () => {
     
   //   const hash = SHA256(code).toString();
-  //   console.log(code);
+    console.log(code);
   //   if (
   //     hash ===
   //     'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
@@ -21,7 +21,7 @@ export const Access = ({
   //   } else {
   //     alert('Código incorrecto');
   //   }
-  // }
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center">
@@ -41,7 +41,7 @@ export const Access = ({
           />
           <button
             className="w-full rounded-full border border-blue-950 bg-blue-950 p-2 font-bold text-gray-100 hover:bg-blue-800"
-            // onClick={handleClick}
+            onClick={handleClick}
           >
             Entrar
           </button>

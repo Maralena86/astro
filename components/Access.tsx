@@ -10,17 +10,15 @@ export const Access = ({
 }) => {
   const [code, setCode] = useState('');
   const handleClick = () => {
-    
-  //   const hash = SHA256(code).toString();
-    console.log('coucou');
-  //   if (
-  //     hash ===
-  //     'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
-  //   ) {
-  //     setAccess(true);
-  //   } else {
-  //     alert('Código incorrecto');
-  //   }
+  const hash = SHA256(code).toString()
+    if (
+      hash ===
+      'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
+    ) {
+      setAccess(true);
+    } else {
+      alert('Código incorrecto');
+    }
   }
 
   return (

@@ -3,7 +3,7 @@ interface VideoYoutubeProps {
   linky: string;
 }
 
-export default function VideoYoutube({ name, linky }: VideoYoutubeProps) {
+export const VideoYoutube = ({ name, linky }: VideoYoutubeProps) => {
   return (
     <div className="video-container bg-black p-4">
       <p className="text-white">{name}</p>

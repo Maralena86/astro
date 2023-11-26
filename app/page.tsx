@@ -2,7 +2,7 @@
 
 import sha256 from 'crypto-js/sha256';
 import { useState } from 'react';
-import VideoYoutube from './components/Video-youtube';
+import { VideoYoutube } from './components/Video-youtube';
 import videos from './lib/videos.json';
 import Login from './components/Login';
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
     <main className="flex min-h-screen flex-col p-6">
       {access ? (
         <div>
-          <h1 className="text-center text-white uppercase p-4">Videos</h1>
+          <h1 className="p-4 text-center uppercase text-white">Videos</h1>
           <div className="flex flex-wrap justify-center gap-4">
             {videos.map((video) => (
               <VideoYoutube

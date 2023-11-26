@@ -31,9 +31,10 @@ export const Access = ({
             className="w-full rounded-md border border-gray-700 bg-gray-900 p-2 "
             placeholder="Código"
             type="text"
-            onChange={(e) => 
+            onChange={(e) => {
+              e.preventDefault()
               setCode(e.target.value)
-            }
+              }}
             name="correo"
             id=""
           />

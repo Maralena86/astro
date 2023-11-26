@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col p-4">
-      {access ? (
+      {/* {access ? ( */}
         <div>
           <h1 className="p-4 text-center uppercase text-white">Videos</h1>
           <div className="flex flex-wrap justify-center gap-4">
@@ -22,9 +22,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      ) : (
+      {/* ) : (
         <Login setAccess={setAccess} />
-      )}
+      )} */}
     </main>
   );
 }

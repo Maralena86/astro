@@ -8,7 +8,7 @@ export const Access = ({
 }: {
   setAccess: Dispatch<SetStateAction<boolean>>;
 }) => {
-  // const [code, setCode] = useState('');
+  const [code, setCode] = useState('0');
   const handleClick = () => {
   const hash = SHA256('Gradiva2024').toString()
     if (
@@ -31,9 +31,9 @@ export const Access = ({
             className="w-full rounded-md border border-gray-700 bg-gray-900 p-2 "
             placeholder="Código"
             type="text"
-            // onChange={(e) => 
-            //   setCode(e.target.value)
-            // }
+            onChange={(e) => 
+              setCode(e.target.value)
+            }
             name="correo"
             id=""
           />

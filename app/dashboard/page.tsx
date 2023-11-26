@@ -107,7 +107,7 @@ export default function Page() {
       <h1 className="text-center text-white">Videos</h1>
       <div className="flex flex-wrap gap-4">
         {videos.map((video) => (
-          <VideoYoutube name={video.name} linky={video.link} />
+          <VideoYoutube key={video.name} name={video.name} linky={video.link} />
         ))}
       </div>
     </div>

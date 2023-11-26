@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { VideoYoutube } from '@/components/video-youtube';
 import videos from './lib/videos.json';
 import { Login } from '@/components/login';
-export default function Page() {
+export default function Home() {
   const [access, setAccess] = useState(false);
 
   return (

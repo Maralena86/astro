@@ -10,6 +10,7 @@ export const Login = ({
 }) => {
   const [code, setCode] = useState('');
   const handleClick = () => {
+    
     const hash = SHA256(code).toString();
     console.log(code);
     if (

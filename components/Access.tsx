@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Dispatch, SetStateAction, useState } from 'react';
 import logo from '@/public/logo-nubia.png';
 
-export const Login = ({
+export const Access = ({
   setAccess,
 }: {
   setAccess: Dispatch<SetStateAction<boolean>>;

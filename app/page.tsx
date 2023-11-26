@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { VideoYoutube } from '@/components/VideoYoutube';
 import videos from './lib/videos.json';
-import { Login } from '@/components/Login';
+import { Access } from '@/components/Access';
+
 export default function Home() {
   const [access, setAccess] = useState(false);
 
@@ -23,7 +24,7 @@ export default function Home() {
           </div>
         </div>
       ) : (
-        <Login setAccess={setAccess} />
+        <Access setAccess={setAccess} />
       )}
     </main>
   );

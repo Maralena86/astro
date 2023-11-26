@@ -2,9 +2,9 @@
 
 import sha256 from 'crypto-js/sha256';
 import { useState } from 'react';
-import { VideoYoutube } from './components/Video-youtube';
+import { VideoYoutube } from './components/video-youtube';
 import videos from './lib/videos.json';
-import Login from './components/Login';
+import Login from './components/login';
 export default function Page() {
   const [access, setAccess] = useState(false);
 

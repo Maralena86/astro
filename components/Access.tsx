@@ -2,45 +2,56 @@ import { SHA256 } from 'crypto-js';
 import Image from 'next/image';
 import { Dispatch, SetStateAction, useState } from 'react';
 import logo from '@/public/logo-nubia.png';
+import { EyeIcon, EyeOff} from 'lucide-react'
 
 export const Access = ({
   setAccess,
 }: {
   setAccess: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const [code, setCode] = useState('0');
+  const [code, setCode] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const handleClick = () => {
-  const hash = SHA256('Gradiva2024').toString()
+    console.log("Coucou kk")
+  const hash = SHA256(code).toString()
+
     if (
-      hash ===
-      'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
+      // code === "Gradiva2024"
+      hash === 'f1264fe082ef163498687cf3d9ba5f33ea3a56c46a22c83bd50d0c8cd2059e02'
+      
     ) {
       setAccess(true);
     } else {
       alert('Código incorrecto');
     }
   }
+  
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <div className="min-h-1/2 bg-dark  rounded-2xl border border-gray-900">
+      <div className="min-h-1/2 login-container  rounded-2xl ">
         <div className="md:mx-34 mx-4 mx-auto flex flex-col  items-center space-y-4 py-16 font-semibold text-gray-500 sm:mx-24 lg:mx-56">
           <Image src={logo} alt={'logo'} width={150} />
           <h1 className="text-2xl text-white">Conexion de acceso</h1>
-          <input
-            className="w-full rounded-md border border-gray-700 bg-gray-900 p-2 "
-            placeholder="Código"
-            type="text"
-            onChange={(e) => {
-              e.preventDefault()
-              setCode(e.target.value)
-              }}
-            name="correo"
-            id=""
-          />
+          <div className='bg-white flex mb-4'>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              placeholder="Password"
+              />
+            <span className="eye-icon" onClick={togglePasswordVisibility}>
+              {showPassword ?  <EyeIcon/> : <EyeOff/>}
+            </span>
+          </div>
           <button
             className="w-full rounded-full border border-blue-950 bg-blue-950 p-2 font-bold text-gray-100 hover:bg-blue-800"
-            onClick={handleClick}
+            onClick={() => handleClick()}
           >
             Entrar
           </button>
